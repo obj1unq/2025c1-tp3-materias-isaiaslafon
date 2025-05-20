@@ -1,0 +1,16 @@
+import materias.*
+
+describe "materias"{
+    const estudiante = new Estudiante()
+    
+    const matematica1 = new Materia(cupo = 10)
+    const objetos1 = new Materia(cupo = 30)
+
+    test "materias aprobadas"{
+        estudiante.aprobar(matematica1, 9)
+        estudiante.aprobar(objetos1, 10)
+
+        assert.equals(#{matematica1, objetos1}, estudiante.materiasAprobadas())
+    }
+
+}
